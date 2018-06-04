@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zuo.dao.UserDao">
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <select id="queryByNo" resultType="user" parameterType="string">
+        <!-- 具体的sql -->
+        SELECT * FROM user WHERE emp_no = #{emp_no}
+    </select>
+    <select id="queryAll" resultType="user">
+        SELECT * FROM user
+    </select>
+
+    <!--<delete id="delete" parameterType="string">-->
+        <!--DELETE FROM user WHERE emp_no=#{emp_no}-->
+    <!--</delete>-->
+
+    <!--<update id="update" parameterType="user">-->
+        <!--UPDATE USER SET emp_pass=#{emp_pass},-->
+        <!--type = #{type},head_path=#{head_path}-->
+        <!--WHERE emp_no = #{emp_no}-->
+    <!--</update>-->
+
+    <insert id="insert" parameterType="user">
+        INSERT INTO user(emp_no,emp_pass,type,head_path) VALUES
+        (#{emp_no},#{emp_pass},#{type},#{head_path})
+    </insert>
+
+
+</mapper>
