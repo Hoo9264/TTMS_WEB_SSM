@@ -19,6 +19,13 @@ public interface PlayDao {
      * @param play_id
      * @return
      */
+    Play queryById(int play_id);
+
+    /**
+     * 通过id查询
+     * @param play_id
+     * @return
+     */
     Play queryPlayById(int play_id);
 
     /**

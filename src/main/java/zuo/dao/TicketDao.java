@@ -12,6 +12,15 @@ public interface TicketDao {
     List<Ticket> queryAll();
 
     /**
+     * 按演出计划id查询
+     * @param sched_id
+     * @return
+     */
+    List<Ticket> queryBySchedId(int sched_id);
+
+    Ticket queryById(int ticket_id);
+
+    /**
      * 插入
      * @param ticket
      */

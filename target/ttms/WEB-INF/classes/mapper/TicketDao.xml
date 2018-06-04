@@ -4,4 +4,25 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="zuo.dao.TicketDao">
 
+    <select id="queryAll" resultType="ticket">
+        SELECT * FROM ticket
+    </select>
+    <!--queryBySchedId-->
+    <select id="queryBySchedId" resultType="ticket" parameterType="int">
+        SELECT * FROM ticket WHERE sched_id = #{sched_id}
+    </select>
+    <select id="queryById" resultType="ticket" parameterType="int">
+        SELECT * FROM ticket WHERE ticket_id = #{ticket_id}
+    </select>
+    <insert id="insert" parameterType="zuo.entity.Ticket">
+      <selectKey keyProperty="ticket_id" resultType="int" order="AFTER">
+          SELECT
+          LAST_INSERT_ID()
+      </selectKey>
+        INSERT  INTO ticket(seat_id,sched_id,ticket_price,ticket_status)
+        VALUES (#{seat_id},#{sched_id},#{ticket_price},#{ticket_status})
+    </insert>
+    <delete id="delete" parameterType="int">
+        DELETE FROM ticket WHERE ticket_id=#{ticket_id}
+    </delete>
 </mapper>
