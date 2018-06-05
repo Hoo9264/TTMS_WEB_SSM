@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xiyou.dao.PlayMapper">
+  <resultMap id="BaseResultMap" type="xiyou.pojo.Play">
+    <id column="play_id" jdbcType="INTEGER" property="playId" />
+    <result column="play_type" jdbcType="VARCHAR" property="playType" />
+    <result column="play_lang" jdbcType="VARCHAR" property="playLang" />
+    <result column="play_name" jdbcType="VARCHAR" property="playName" />
+    <result column="play_introduction" jdbcType="VARCHAR" property="playIntroduction" />
+    <result column="play_image" jdbcType="VARCHAR" property="playImage" />
+    <result column="play_length" jdbcType="INTEGER" property="playLength" />
+    <result column="play_ticket_price" jdbcType="DECIMAL" property="playTicketPrice" />
+    <result column="play_status" jdbcType="SMALLINT" property="playStatus" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    play_id, play_type, play_lang, play_name, play_introduction, play_image, play_length, 
+    play_ticket_price, play_status
+  </sql>
+  <select id="selectByExample" parameterType="xiyou.pojo.PlayExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from play
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from play
+    where play_id = #{playId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from play
+    where play_id = #{playId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="xiyou.pojo.PlayExample">
+    delete from play
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="xiyou.pojo.Play">
+    insert into play (play_id, play_type, play_lang, 
+      play_name, play_introduction, play_image, 
+      play_length, play_ticket_price, play_status
+      )
+    values (#{playId,jdbcType=INTEGER}, #{playType,jdbcType=VARCHAR}, #{playLang,jdbcType=VARCHAR}, 
+      #{playName,jdbcType=VARCHAR}, #{playIntroduction,jdbcType=VARCHAR}, #{playImage,jdbcType=VARCHAR}, 
+      #{playLength,jdbcType=INTEGER}, #{playTicketPrice,jdbcType=DECIMAL}, #{playStatus,jdbcType=SMALLINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="xiyou.pojo.Play">
+    insert into play
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="playId != null">
+        play_id,
+      </if>
+      <if test="playType != null">
+        play_type,
+      </if>
+      <if test="playLang != null">
+        play_lang,
+      </if>
+      <if test="playName != null">
+        play_name,
+      </if>
+      <if test="playIntroduction != null">
+        play_introduction,
+      </if>
+      <if test="playImage != null">
+        play_image,
+      </if>
+      <if test="playLength != null">
+        play_length,
+      </if>
+      <if test="playTicketPrice != null">
+        play_ticket_price,
+      </if>
+      <if test="playStatus != null">
+        play_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="playId != null">
+        #{playId,jdbcType=INTEGER},
+      </if>
+      <if test="playType != null">
+        #{playType,jdbcType=VARCHAR},
+      </if>
+      <if test="playLang != null">
+        #{playLang,jdbcType=VARCHAR},
+      </if>
+      <if test="playName != null">
+        #{playName,jdbcType=VARCHAR},
+      </if>
+      <if test="playIntroduction != null">
+        #{playIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="playImage != null">
+        #{playImage,jdbcType=VARCHAR},
+      </if>
+      <if test="playLength != null">
+        #{playLength,jdbcType=INTEGER},
+      </if>
+      <if test="playTicketPrice != null">
+        #{playTicketPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="playStatus != null">
+        #{playStatus,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="xiyou.pojo.PlayExample" resultType="java.lang.Long">
+    select count(*) from play
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update play
+    <set>
+      <if test="record.playId != null">
+        play_id = #{record.playId,jdbcType=INTEGER},
+      </if>
+      <if test="record.playType != null">
+        play_type = #{record.playType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.playLang != null">
+        play_lang = #{record.playLang,jdbcType=VARCHAR},
+      </if>
+      <if test="record.playName != null">
+        play_name = #{record.playName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.playIntroduction != null">
+        play_introduction = #{record.playIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.playImage != null">
+        play_image = #{record.playImage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.playLength != null">
+        play_length = #{record.playLength,jdbcType=INTEGER},
+      </if>
+      <if test="record.playTicketPrice != null">
+        play_ticket_price = #{record.playTicketPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="record.playStatus != null">
+        play_status = #{record.playStatus,jdbcType=SMALLINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update play
+    set play_id = #{record.playId,jdbcType=INTEGER},
+      play_type = #{record.playType,jdbcType=VARCHAR},
+      play_lang = #{record.playLang,jdbcType=VARCHAR},
+      play_name = #{record.playName,jdbcType=VARCHAR},
+      play_introduction = #{record.playIntroduction,jdbcType=VARCHAR},
+      play_image = #{record.playImage,jdbcType=VARCHAR},
+      play_length = #{record.playLength,jdbcType=INTEGER},
+      play_ticket_price = #{record.playTicketPrice,jdbcType=DECIMAL},
+      play_status = #{record.playStatus,jdbcType=SMALLINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="xiyou.pojo.Play">
+    update play
+    <set>
+      <if test="playType != null">
+        play_type = #{playType,jdbcType=VARCHAR},
+      </if>
+      <if test="playLang != null">
+        play_lang = #{playLang,jdbcType=VARCHAR},
+      </if>
+      <if test="playName != null">
+        play_name = #{playName,jdbcType=VARCHAR},
+      </if>
+      <if test="playIntroduction != null">
+        play_introduction = #{playIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="playImage != null">
+        play_image = #{playImage,jdbcType=VARCHAR},
+      </if>
+      <if test="playLength != null">
+        play_length = #{playLength,jdbcType=INTEGER},
+      </if>
+      <if test="playTicketPrice != null">
+        play_ticket_price = #{playTicketPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="playStatus != null">
+        play_status = #{playStatus,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where play_id = #{playId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="xiyou.pojo.Play">
+    update play
+    set play_type = #{playType,jdbcType=VARCHAR},
+      play_lang = #{playLang,jdbcType=VARCHAR},
+      play_name = #{playName,jdbcType=VARCHAR},
+      play_introduction = #{playIntroduction,jdbcType=VARCHAR},
+      play_image = #{playImage,jdbcType=VARCHAR},
+      play_length = #{playLength,jdbcType=INTEGER},
+      play_ticket_price = #{playTicketPrice,jdbcType=DECIMAL},
+      play_status = #{playStatus,jdbcType=SMALLINT}
+    where play_id = #{playId,jdbcType=INTEGER}
+  </update>
+</mapper>

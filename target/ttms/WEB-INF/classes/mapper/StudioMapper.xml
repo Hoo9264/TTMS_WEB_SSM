@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xiyou.dao.StudioMapper">
+  <resultMap id="BaseResultMap" type="xiyou.pojo.Studio">
+    <id column="studio_id" jdbcType="INTEGER" property="studioId" />
+    <result column="studio_name" jdbcType="VARCHAR" property="studioName" />
+    <result column="studio_row_count" jdbcType="INTEGER" property="studioRowCount" />
+    <result column="studio_col_count" jdbcType="INTEGER" property="studioColCount" />
+    <result column="studio_introduction" jdbcType="VARCHAR" property="studioIntroduction" />
+    <result column="studio_flag" jdbcType="SMALLINT" property="studioFlag" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    studio_id, studio_name, studio_row_count, studio_col_count, studio_introduction, 
+    studio_flag
+  </sql>
+  <select id="selectByExample" parameterType="xiyou.pojo.StudioExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from studio
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from studio
+    where studio_id = #{studioId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from studio
+    where studio_id = #{studioId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="xiyou.pojo.StudioExample">
+    delete from studio
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="xiyou.pojo.Studio">
+    insert into studio (studio_id, studio_name, studio_row_count, 
+      studio_col_count, studio_introduction, studio_flag
+      )
+    values (#{studioId,jdbcType=INTEGER}, #{studioName,jdbcType=VARCHAR}, #{studioRowCount,jdbcType=INTEGER}, 
+      #{studioColCount,jdbcType=INTEGER}, #{studioIntroduction,jdbcType=VARCHAR}, #{studioFlag,jdbcType=SMALLINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="xiyou.pojo.Studio">
+    insert into studio
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="studioId != null">
+        studio_id,
+      </if>
+      <if test="studioName != null">
+        studio_name,
+      </if>
+      <if test="studioRowCount != null">
+        studio_row_count,
+      </if>
+      <if test="studioColCount != null">
+        studio_col_count,
+      </if>
+      <if test="studioIntroduction != null">
+        studio_introduction,
+      </if>
+      <if test="studioFlag != null">
+        studio_flag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="studioId != null">
+        #{studioId,jdbcType=INTEGER},
+      </if>
+      <if test="studioName != null">
+        #{studioName,jdbcType=VARCHAR},
+      </if>
+      <if test="studioRowCount != null">
+        #{studioRowCount,jdbcType=INTEGER},
+      </if>
+      <if test="studioColCount != null">
+        #{studioColCount,jdbcType=INTEGER},
+      </if>
+      <if test="studioIntroduction != null">
+        #{studioIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="studioFlag != null">
+        #{studioFlag,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="xiyou.pojo.StudioExample" resultType="java.lang.Long">
+    select count(*) from studio
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update studio
+    <set>
+      <if test="record.studioId != null">
+        studio_id = #{record.studioId,jdbcType=INTEGER},
+      </if>
+      <if test="record.studioName != null">
+        studio_name = #{record.studioName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.studioRowCount != null">
+        studio_row_count = #{record.studioRowCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.studioColCount != null">
+        studio_col_count = #{record.studioColCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.studioIntroduction != null">
+        studio_introduction = #{record.studioIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.studioFlag != null">
+        studio_flag = #{record.studioFlag,jdbcType=SMALLINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update studio
+    set studio_id = #{record.studioId,jdbcType=INTEGER},
+      studio_name = #{record.studioName,jdbcType=VARCHAR},
+      studio_row_count = #{record.studioRowCount,jdbcType=INTEGER},
+      studio_col_count = #{record.studioColCount,jdbcType=INTEGER},
+      studio_introduction = #{record.studioIntroduction,jdbcType=VARCHAR},
+      studio_flag = #{record.studioFlag,jdbcType=SMALLINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="xiyou.pojo.Studio">
+    update studio
+    <set>
+      <if test="studioName != null">
+        studio_name = #{studioName,jdbcType=VARCHAR},
+      </if>
+      <if test="studioRowCount != null">
+        studio_row_count = #{studioRowCount,jdbcType=INTEGER},
+      </if>
+      <if test="studioColCount != null">
+        studio_col_count = #{studioColCount,jdbcType=INTEGER},
+      </if>
+      <if test="studioIntroduction != null">
+        studio_introduction = #{studioIntroduction,jdbcType=VARCHAR},
+      </if>
+      <if test="studioFlag != null">
+        studio_flag = #{studioFlag,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where studio_id = #{studioId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="xiyou.pojo.Studio">
+    update studio
+    set studio_name = #{studioName,jdbcType=VARCHAR},
+      studio_row_count = #{studioRowCount,jdbcType=INTEGER},
+      studio_col_count = #{studioColCount,jdbcType=INTEGER},
+      studio_introduction = #{studioIntroduction,jdbcType=VARCHAR},
+      studio_flag = #{studioFlag,jdbcType=SMALLINT}
+    where studio_id = #{studioId,jdbcType=INTEGER}
+  </update>
+</mapper>

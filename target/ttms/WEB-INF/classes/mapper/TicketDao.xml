@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="zuo.dao.TicketDao">
+<mapper namespace="xiyou.dao.TicketDao">
 
     <select id="queryAll" resultType="ticket">
         SELECT * FROM ticket
@@ -14,7 +14,7 @@
     <select id="queryById" resultType="ticket" parameterType="int">
         SELECT * FROM ticket WHERE ticket_id = #{ticket_id}
     </select>
-    <insert id="insert" parameterType="zuo.entity.Ticket">
+    <insert id="insert" parameterType="xiyou.pojo.Ticket">
       <selectKey keyProperty="ticket_id" resultType="int" order="AFTER">
           SELECT
           LAST_INSERT_ID()

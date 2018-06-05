@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xiyou.dao.SeatMapper">
+  <resultMap id="BaseResultMap" type="xiyou.pojo.Seat">
+    <id column="seat_id" jdbcType="INTEGER" property="seatId" />
+    <result column="studio_id" jdbcType="INTEGER" property="studioId" />
+    <result column="seat_row" jdbcType="INTEGER" property="seatRow" />
+    <result column="seat_column" jdbcType="INTEGER" property="seatColumn" />
+    <result column="seat_status" jdbcType="SMALLINT" property="seatStatus" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    seat_id, studio_id, seat_row, seat_column, seat_status
+  </sql>
+  <select id="selectByExample" parameterType="xiyou.pojo.SeatExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from seat
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from seat
+    where seat_id = #{seatId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from seat
+    where seat_id = #{seatId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="xiyou.pojo.SeatExample">
+    delete from seat
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="xiyou.pojo.Seat">
+    insert into seat (seat_id, studio_id, seat_row, 
+      seat_column, seat_status)
+    values (#{seatId,jdbcType=INTEGER}, #{studioId,jdbcType=INTEGER}, #{seatRow,jdbcType=INTEGER}, 
+      #{seatColumn,jdbcType=INTEGER}, #{seatStatus,jdbcType=SMALLINT})
+  </insert>
+  <insert id="insertSelective" parameterType="xiyou.pojo.Seat">
+    insert into seat
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="seatId != null">
+        seat_id,
+      </if>
+      <if test="studioId != null">
+        studio_id,
+      </if>
+      <if test="seatRow != null">
+        seat_row,
+      </if>
+      <if test="seatColumn != null">
+        seat_column,
+      </if>
+      <if test="seatStatus != null">
+        seat_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="seatId != null">
+        #{seatId,jdbcType=INTEGER},
+      </if>
+      <if test="studioId != null">
+        #{studioId,jdbcType=INTEGER},
+      </if>
+      <if test="seatRow != null">
+        #{seatRow,jdbcType=INTEGER},
+      </if>
+      <if test="seatColumn != null">
+        #{seatColumn,jdbcType=INTEGER},
+      </if>
+      <if test="seatStatus != null">
+        #{seatStatus,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="xiyou.pojo.SeatExample" resultType="java.lang.Long">
+    select count(*) from seat
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update seat
+    <set>
+      <if test="record.seatId != null">
+        seat_id = #{record.seatId,jdbcType=INTEGER},
+      </if>
+      <if test="record.studioId != null">
+        studio_id = #{record.studioId,jdbcType=INTEGER},
+      </if>
+      <if test="record.seatRow != null">
+        seat_row = #{record.seatRow,jdbcType=INTEGER},
+      </if>
+      <if test="record.seatColumn != null">
+        seat_column = #{record.seatColumn,jdbcType=INTEGER},
+      </if>
+      <if test="record.seatStatus != null">
+        seat_status = #{record.seatStatus,jdbcType=SMALLINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update seat
+    set seat_id = #{record.seatId,jdbcType=INTEGER},
+      studio_id = #{record.studioId,jdbcType=INTEGER},
+      seat_row = #{record.seatRow,jdbcType=INTEGER},
+      seat_column = #{record.seatColumn,jdbcType=INTEGER},
+      seat_status = #{record.seatStatus,jdbcType=SMALLINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="xiyou.pojo.Seat">
+    update seat
+    <set>
+      <if test="studioId != null">
+        studio_id = #{studioId,jdbcType=INTEGER},
+      </if>
+      <if test="seatRow != null">
+        seat_row = #{seatRow,jdbcType=INTEGER},
+      </if>
+      <if test="seatColumn != null">
+        seat_column = #{seatColumn,jdbcType=INTEGER},
+      </if>
+      <if test="seatStatus != null">
+        seat_status = #{seatStatus,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where seat_id = #{seatId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="xiyou.pojo.Seat">
+    update seat
+    set studio_id = #{studioId,jdbcType=INTEGER},
+      seat_row = #{seatRow,jdbcType=INTEGER},
+      seat_column = #{seatColumn,jdbcType=INTEGER},
+      seat_status = #{seatStatus,jdbcType=SMALLINT}
+    where seat_id = #{seatId,jdbcType=INTEGER}
+  </update>
+</mapper>

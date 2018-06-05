@@ -7,27 +7,137 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eec42055-a7de-46f0-a35d-b6d8c7b5e96d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/zuo/controller/TicketController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/Test.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/EmployeeMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/PlayMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/SaleItemMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/SaleMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/ScheduleMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/SeatMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/StudioMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/TicketMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/UserMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/Employee.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/EmployeeExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/Play.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/PlayExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/Sale.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/SaleExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/SaleItem.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/SaleItemExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/Schedule.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/ScheduleExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/Seat.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/SeatExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/Studio.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/StudioExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/Ticket.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/TicketExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/User.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/UserExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PlayMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SaleItemMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SaleMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ScheduleMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SeatMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudioMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TicketMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/TTMS_WEB_SSM.iml" afterPath="$PROJECT_DIR$/TTMS_WEB_SSM.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/PlayDao.java" afterPath="$PROJECT_DIR$/src/main/java/zuo/dao/PlayDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/TicketDao.java" afterPath="$PROJECT_DIR$/src/main/java/zuo/dao/TicketDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/web/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/zuo/controller/UserController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/controller/TicketController.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/controller/TicketController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/controller/UserController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/EmployeeDao.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/EmployeeDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/PlayDao.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/PlayDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/ScheduleDao.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/ScheduleDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/SeatDao.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/SeatDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/StudioDao.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/StudioDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/TestDao.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/TestDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/TicketDao.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/TicketDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/dao/UserDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/entity/Employee.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/entity/Play.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/entity/Sale.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/entity/Sale_item.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/pojo/Sale_item.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/entity/Schedule.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/entity/Seat.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/entity/Studio.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/entity/Ticket.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/entity/User.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/service/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zuo/service/impl/UserServiceUmpl.java" afterPath="$PROJECT_DIR$/src/main/java/xiyou/service/impl/UserServiceUmpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlayDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PlayDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ScheduleDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ScheduleDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SeatDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SeatDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudioDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudioDao.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TicketDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TicketDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EmployeeDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/EmployeeDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PlayDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/PlayDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ScheduleDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ScheduleDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SeatDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/SeatDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudioDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/StudioDao.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/TicketDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/TicketDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-dao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" afterPath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/PlayDao.class" afterPath="$PROJECT_DIR$/target/classes/zuo/dao/PlayDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/TicketDao.class" afterPath="$PROJECT_DIR$/target/classes/zuo/dao/TicketDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/zuo/web/UserController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/controller/TicketController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/controller/UserController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/EmployeeDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/PlayDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/ScheduleDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/SeatDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/StudioDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/TestDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/TicketDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/dao/UserDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/entity/Employee.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/entity/Play.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/entity/Sale.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/entity/Sale_item.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/entity/Schedule.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/entity/Seat.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/entity/Studio.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/entity/Ticket.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/entity/User.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/service/UserService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zuo/service/impl/UserServiceUmpl.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/ttms.war" afterPath="$PROJECT_DIR$/target/ttms.war" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/EmployeeDao.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/EmployeeDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/PlayDao.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/PlayDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/ScheduleDao.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/ScheduleDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/SeatDao.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/SeatDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/StudioDao.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/StudioDao.xml" />
       <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/TicketDao.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/TicketDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/mapper/UserDao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/spring/spring-dao.xml" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/spring/spring-service.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/spring/spring-service.xml" />
       <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/spring/spring-web.xml" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/spring/spring-web.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/PlayDao.class" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/PlayDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/TicketDao.class" afterPath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/TicketDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/web/UserController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/controller/TicketController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/controller/UserController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/EmployeeDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/PlayDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/ScheduleDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/SeatDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/StudioDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/TestDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/TicketDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/dao/UserDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/entity/Employee.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/entity/Play.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/entity/Sale.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/entity/Sale_item.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/entity/Schedule.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/entity/Seat.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/entity/Studio.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/entity/Ticket.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/entity/User.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/service/UserService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/ttms/WEB-INF/classes/zuo/service/impl/UserServiceUmpl.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,20 +151,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="TicketDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/TicketDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/TicketDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="39">
               <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/zuo/controller/TicketController.java">
+      <file leaf-file-name="spring-web.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="273">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/controller/TicketController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/TicketMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,7 +195,7 @@
         </entry>
       </file>
       <file leaf-file-name="UserServiceUmpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/zuo/service/impl/UserServiceUmpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/service/impl/UserServiceUmpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
               <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
@@ -75,25 +207,8 @@
       <file leaf-file-name="TicketDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TicketDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="1014">
               <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-              <folding>
-                <marker date="1528086786219" expanded="true" signature="258:278" ph="SELECT * FRO... ticket" />
-                <marker date="1528086786219" expanded="true" signature="400:449" ph="SELECT * FRO... ticket" />
-                <marker date="1528086786219" expanded="true" signature="540:591" ph="SELECT * FRO... ticket" />
-                <marker date="1528086786219" expanded="true" signature="809:946" ph="INSERT INTO ticket" />
-                <marker date="1528086786219" expanded="true" signature="828:946" ph="(seat_id,sch... " />
-                <marker date="1528086786219" expanded="true" signature="1014:1061" ph="DELETE FROM ticket... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ticket.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/zuo/entity/Ticket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -132,7 +247,6 @@
         <option value="$PROJECT_DIR$/src/main/java/zuo/dao/ScheduleMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/zuo/dao/SeatMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/zuo/dao/StudioMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/zuo/dao/TicketMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/zuo/dao/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/DataDictMapper.xml" />
@@ -152,6 +266,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TicketDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/zuo/web/TicketController.java" />
         <option value="$PROJECT_DIR$/src/main/java/zuo/controller/TicketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zuo/dao/TicketMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xiyou/dao/TicketMapper.java" />
       </list>
     </option>
   </component>
@@ -181,8 +297,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="950" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="354" />
+    <option name="y" value="40" />
     <option name="width" value="980" />
     <option name="height" value="1090" />
   </component>
@@ -220,6 +337,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -253,7 +372,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zuo" type="462c0819:PsiDirectoryNode" />
+              <item name="xiyou" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TTMS_WEB_SSM" type="b2602c69:ProjectViewProjectNode" />
@@ -261,8 +380,26 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zuo" type="462c0819:PsiDirectoryNode" />
+              <item name="xiyou" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TTMS_WEB_SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TTMS_WEB_SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xiyou" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TTMS_WEB_SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TTMS_WEB_SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xiyou" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TTMS_WEB_SSM" type="b2602c69:ProjectViewProjectNode" />
@@ -279,12 +416,18 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TTMS_WEB_SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TTMS_WEB_SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,14 +436,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\homework_3\TTMS_WEB_SSM\src\main\java\zuo\pojo" />
+      <recent name="E:\homework_3\TTMS_WEB_SSM\src\main\resources\mapper" />
+      <recent name="E:\homework_3\TTMS_WEB_SSM\src\main\java\zuo\dao" />
       <recent name="E:\TTMS_WEB_SSM\src\main\java\zuo\dao" />
       <recent name="E:\TTMS_WEB_SSM\src\main\java\zuo\po" />
-      <recent name="E:\TTMS_WEB_SSM\src\main\resources\mapper" />
-      <recent name="E:\TTMS_WEB_SSM\src\main\resources" />
-      <recent name="E:\TTMS_WEB_SSM\src\main\resources\spring" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -514,6 +658,7 @@
       <updated>1528077972321</updated>
       <workItem from="1528077976964" duration="553000" />
       <workItem from="1528079037521" duration="8289000" />
+      <workItem from="1528173012126" duration="371000" />
     </task>
     <servers />
   </component>
@@ -526,15 +671,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8842000" />
+    <option name="totallyTimeSpent" value="9213000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1102" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1102" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -553,9 +698,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267544" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2575594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36555076" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -563,6 +707,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,6 +721,48 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/TicketDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/service/impl/UserServiceUmpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TicketDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/pojo/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/controller/TicketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -596,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,7 +794,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/TestDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/TestDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
@@ -658,7 +844,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/entity/Employee.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/pojo/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1060">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -666,7 +852,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/entity/Play.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/pojo/Play.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
@@ -674,183 +860,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="26" column="63" lean-forward="false" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/po/DataDict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/DataDictMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/EmployeeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-506">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/PlayMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/SaleItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/SaleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/ScheduleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/SeatMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/StudioMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-683">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/TicketMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataDictMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PlayMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SaleItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SaleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ScheduleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SeatMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudioMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TicketMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="70" column="63" lean-forward="false" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/PlayDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/po/DataDict.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/DataDictMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/EmployeeMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/PlayMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/SaleItemMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/SaleMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/ScheduleMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/SeatMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/StudioMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/UserMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataDictMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PlayMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SaleItemMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SaleMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ScheduleMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SeatMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudioMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TicketMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/PlayDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-896">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
@@ -858,7 +888,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/EmployeeDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/EmployeeDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
@@ -868,7 +898,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
@@ -880,7 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,15 +917,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <marker date="1528079395779" expanded="true" signature="335:378" ph="SELECT * FRO... user" />
-            <marker date="1528079395779" expanded="true" signature="446:464" ph="SELECT * FRO... user" />
-            <marker date="1528079395779" expanded="true" signature="887:995" ph="INSERT INTO user... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="37" />
@@ -910,14 +935,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-          <folding>
-            <element signature="e#68#69#0" expanded="false" />
-            <element signature="e#108#109#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/entity/Ticket.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/pojo/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="25" />
@@ -925,30 +946,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/dao/TicketDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TicketDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="1014">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TicketDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/TicketMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="195">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding>
-            <marker date="1528086786219" expanded="true" signature="258:278" ph="SELECT * FRO... ticket" />
-            <marker date="1528086786219" expanded="true" signature="400:449" ph="SELECT * FRO... ticket" />
-            <marker date="1528086786219" expanded="true" signature="540:591" ph="SELECT * FRO... ticket" />
-            <marker date="1528086786219" expanded="true" signature="809:946" ph="INSERT INTO ticket" />
-            <marker date="1528086786219" expanded="true" signature="828:946" ph="(seat_id,sch... " />
-            <marker date="1528086786219" expanded="true" signature="1014:1061" ph="DELETE FROM ticket... " />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/service/impl/UserServiceUmpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/service/impl/UserServiceUmpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
@@ -956,13 +972,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zuo/controller/TicketController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/controller/TicketController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="351">
+          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xiyou/dao/TicketDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
