@@ -4,14 +4,12 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import xiyou.dao.ScheduleMapper;
 import xiyou.pojo.Schedule;
 
 import java.util.List;
-
+@CrossOrigin
 @Controller
 @RequestMapping("/schedule")
 public class ScheduleController {
@@ -19,7 +17,7 @@ public class ScheduleController {
     private ScheduleMapper scheduleMapper;
 
     @ResponseBody
-    @RequestMapping("getSchedule")
+    @RequestMapping(value = "getSchedule",method = RequestMethod.GET)
     public PageInfo getPlay(@RequestParam(value = "page",defaultValue = "1")Integer page){
         PageHelper.startPage(page,1);
         List<Schedule> schedules  = scheduleMapper.selectByExample(null);
