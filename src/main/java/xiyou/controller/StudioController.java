@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import xiyou.dao.StudioMapper;
 import xiyou.pojo.Studio;
+import xiyou.service.StudioService;
 
 import java.util.List;
 @CrossOrigin
@@ -15,6 +16,8 @@ import java.util.List;
 public class StudioController {
     @Autowired
     private StudioMapper studioMapper;
+    @Autowired
+    private StudioService studioService;
 
     @ResponseBody
     @RequestMapping(value = "/getStudio")
@@ -26,5 +29,11 @@ public class StudioController {
         if(studios.size()%10!=0) p++;
         PageInfo pageInfo = new PageInfo(studios,p);
         return pageInfo;
+    }
+    @ResponseBody
+    @RequestMapping(value = "/getStudioById")
+    public Studio getStudioById(@RequestParam int studioId)
+    {
+        return studioService.selectByPrimaryKey(studioId);
     }
 }

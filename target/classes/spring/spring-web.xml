@@ -32,4 +32,16 @@
 
     <!-- 4.扫描web相关的bean -->
     <context:component-scan base-package="xiyou.controller" />
+
+    <mvc:interceptors>
+        <!-- 对所有请求都拦截，公共拦截器可以有多个 -->
+        <bean name="baseInterceptor" class="xiyou.interceptor.BaseInterceptor" />
+        <!-- <bean name="testInterceptor" class="cn.zifangsky.interceptor.TestInterceptor" /> -->
+        <!--<mvc:interceptor>-->
+            <!--&lt;!&ndash; 对/test.html进行拦截 &ndash;&gt;-->
+            <!--<mvc:mapping path="/*"/>-->
+            <!--&lt;!&ndash; 特定请求的拦截器只能有一个 &ndash;&gt;-->
+            <!--<bean class="xiyou.interceptor.TestInterceptor" />-->
+        <!--</mvc:interceptor>-->
+    </mvc:interceptors>
 </beans>
