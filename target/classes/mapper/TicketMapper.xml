@@ -90,6 +90,7 @@
     from ticket
     where ticket_id = #{ticketId,jdbcType=BIGINT}
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from ticket
     where ticket_id = #{ticketId,jdbcType=BIGINT}
@@ -225,4 +226,12 @@
       ticket_locked_time = #{ticketLockedTime,jdbcType=TIMESTAMP}
     where ticket_id = #{ticketId,jdbcType=BIGINT}
   </update>
+
+  <select id="selectBySchedId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from ticket
+    where sched_id = #{schedId}
+  </select>
+
 </mapper>

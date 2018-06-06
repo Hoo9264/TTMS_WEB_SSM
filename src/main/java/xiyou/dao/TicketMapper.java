@@ -27,4 +27,6 @@ public interface TicketMapper {
     int updateByPrimaryKeySelective(Ticket record);
 
     int updateByPrimaryKey(Ticket record);
+
+    List<Ticket> selectBySchedId(int schedId);
 }

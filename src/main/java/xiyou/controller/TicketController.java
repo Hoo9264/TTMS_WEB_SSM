@@ -1,60 +1,93 @@
 package xiyou.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import xiyou.dao.TicketDao;
-import xiyou.dao.TicketMapper;
+import org.springframework.web.bind.annotation.*;
 import xiyou.pojo.Ticket;
+import xiyou.service.TicketService;
 
 import java.util.List;
-
+@CrossOrigin//跨域访问
 @Controller
 @RequestMapping("/ticket")
 public class TicketController {
 
     @Autowired
-    private TicketDao ticketDao;
-
-    @Autowired
-    private TicketMapper ticketMapper;
+    private TicketService ticketService;
 
     @ResponseBody
-    @RequestMapping("GetAllJsonTicket")
-    private List<Ticket>  GetAllTicket()
-    {
-//        List<Ticket> tickets;
-//        tickets = ticketDao.queryAll();
-//        return tickets;
-       return ticketMapper.selectByExample(null);
-    }
-    @ResponseBody
-    @RequestMapping("GetAllTicketBySchedId/{sched_id}")
-    private List<Ticket>  GetAllTicketBySchedId(@PathVariable int sched_id)
-    {
-        List<Ticket> tickets;
-        tickets = ticketDao.queryBySchedId(sched_id);
-        return tickets;
+    @RequestMapping("getTicket")
+    private PageInfo getTicket(@RequestParam(value = "page",defaultValue = "1")Integer page)
+    { PageHelper.startPage(page,1);
+        List<Ticket> tickets =ticketService.selectAll();
+        int p = tickets.size()/10;
+        if(tickets.size()%10!=0) p++;
+        PageInfo pageInfo =new PageInfo(tickets,p);
+        return pageInfo;
     }
 
+    /**
+     * 通过演出id查询票
+     * @param page 第几页
+     * @param sched_id
+     * @return
+     */
     @ResponseBody
-    @RequestMapping("GetTicketById/{ticket_id}")
-    private Ticket  GetTicketById(@PathVariable int ticket_id)
+    @RequestMapping("getTicketBySchedId")
+    private PageInfo  getTicketBySchedId(@RequestParam(value = "page",defaultValue = "1")Integer page,@RequestParam int sched_id)
     {
-        Ticket ticket = null;
-
-        ticket = ticketDao.queryById(ticket_id);
-        return ticket;
+        PageHelper.startPage(page,1);
+        List<Ticket> tickets =ticketService.selectBySchedId(sched_id);
+        int p = tickets.size()/10;
+        if(tickets.size()%10!=0) p++;
+        PageInfo pageInfo =new PageInfo(tickets,p);
+        return pageInfo;
     }
 
     @ResponseBody
-    @RequestMapping("DeleteTicketById/{ticket_id}")
-    private String  DeleteTicketById(@PathVariable int ticket_id)
+    @RequestMapping("getTicketById")
+    private Ticket  getTicketById(@RequestParam long ticket_id)
     {
-        ticketDao.delete(ticket_id);
+        return ticketService.selectByPrimaryKey(ticket_id);
+    }
+
+    @ResponseBody
+    @RequestMapping("deleteTicketById")
+    private String  deleteTicketById(@RequestParam long ticket_id)
+    {
+        if (ticketService.delete(ticket_id)>0)
         return "success";
+        return "failed";
     }
+
+    @RequestMapping(value = "insertTicket",method = RequestMethod.POST)
+    private String insertTicket(@RequestBody Ticket ticket)
+    {
+        if(ticketService.insert(ticket)>0)
+        {
+            return "succeed";
+        }
+        return "failed";
+    }
+
+    /**
+     * Post方法请求跟新ticket
+     * 请求时Ajax字符串必须拼接成‘{user:"aa",pass:"pppp"}'的形式
+     * @param ticket
+     * @return
+     */
+    @RequestMapping(value = "updateTicket",method = RequestMethod.POST)
+    private String updateTicket(@RequestBody  Ticket ticket)
+    {
+        if(ticketService.update(ticket)>0)
+        {
+            return "succeed";
+        }
+        return "failed";
+    }
+
+
 
 }
