@@ -27,4 +27,6 @@ public interface ScheduleMapper {
     int updateByPrimaryKeySelective(Schedule record);
 
     int updateByPrimaryKey(Schedule record);
+
+    List<Schedule> selectByPlayId(Integer playId);
 }

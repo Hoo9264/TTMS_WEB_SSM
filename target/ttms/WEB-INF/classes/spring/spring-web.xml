@@ -32,6 +32,7 @@
 
     <!-- 4.扫描web相关的bean -->
     <context:component-scan base-package="xiyou.controller" />
+    <context:component-scan base-package="xiyou.mobileController" />
 
     <mvc:interceptors>
         <!-- 对所有请求都拦截，公共拦截器可以有多个 -->

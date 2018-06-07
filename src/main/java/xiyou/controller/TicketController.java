@@ -5,6 +5,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import xiyou.pojo.Msg;
 import xiyou.pojo.Ticket;
 import xiyou.service.TicketService;
 
@@ -19,13 +20,9 @@ public class TicketController {
 
     @ResponseBody
     @RequestMapping("getTicket")
-    private PageInfo getTicket(@RequestParam(value = "page",defaultValue = "1")Integer page)
-    { PageHelper.startPage(page,1);
-        List<Ticket> tickets =ticketService.selectAll();
-        int p = tickets.size()/10;
-        if(tickets.size()%10!=0) p++;
-        PageInfo pageInfo =new PageInfo(tickets,p);
-        return pageInfo;
+    private Msg getTicket(@RequestParam(value = "page",defaultValue = "1")Integer page)
+    {
+        return Msg.success().add("info",ticketService.selectAll());
     }
 
     /**
@@ -36,40 +33,35 @@ public class TicketController {
      */
     @ResponseBody
     @RequestMapping("getTicketBySchedId")
-    private PageInfo  getTicketBySchedId(@RequestParam(value = "page",defaultValue = "1")Integer page,@RequestParam int sched_id)
+    private Msg  getTicketBySchedId(@RequestParam(value = "page",defaultValue = "1")Integer page,@RequestParam int sched_id)
     {
-        PageHelper.startPage(page,1);
-        List<Ticket> tickets =ticketService.selectBySchedId(sched_id);
-        int p = tickets.size()/10;
-        if(tickets.size()%10!=0) p++;
-        PageInfo pageInfo =new PageInfo(tickets,p);
-        return pageInfo;
+        return Msg.success().add("info",ticketService.selectBySchedId(sched_id));
     }
 
     @ResponseBody
     @RequestMapping("getTicketById")
-    private Ticket  getTicketById(@RequestParam long ticket_id)
+    private Msg  getTicketById(@RequestParam long ticket_id)
     {
-        return ticketService.selectByPrimaryKey(ticket_id);
+        return Msg.success().add("info",ticketService.selectByPrimaryKey(ticket_id));
     }
 
     @ResponseBody
     @RequestMapping("deleteTicketById")
-    private String  deleteTicketById(@RequestParam long ticket_id)
+    private Msg  deleteTicketById(@RequestParam long ticket_id)
     {
         if (ticketService.delete(ticket_id)>0)
-        return "success";
-        return "failed";
+        return Msg.success();
+        return Msg.fail();
     }
 
     @RequestMapping(value = "insertTicket",method = RequestMethod.POST)
-    private String insertTicket(@RequestBody Ticket ticket)
+    private Msg insertTicket(@RequestBody Ticket ticket)
     {
         if(ticketService.insert(ticket)>0)
         {
-            return "succeed";
+            return Msg.success();
         }
-        return "failed";
+        return Msg.fail();
     }
 
     /**
@@ -79,13 +71,13 @@ public class TicketController {
      * @return
      */
     @RequestMapping(value = "updateTicket",method = RequestMethod.POST)
-    private String updateTicket(@RequestBody  Ticket ticket)
+    private Msg updateTicket(@RequestBody  Ticket ticket)
     {
         if(ticketService.update(ticket)>0)
         {
-            return "succeed";
+            return Msg.success();
         }
-        return "failed";
+        return Msg.fail();
     }
 
 

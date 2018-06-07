@@ -17,5 +17,5 @@ public interface UserService {
      * 返回所有user
      * @return
      */
-    List<User> getUserList();
+    List<User> getUser();
 }

@@ -208,4 +208,11 @@
       sched_ticket_price = #{schedTicketPrice,jdbcType=DECIMAL}
     where sched_id = #{schedId,jdbcType=INTEGER}
   </update>
+
+  <select id="selectByPlayId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from schedule
+    where play_id = #{playId,jdbcType=INTEGER}
+  </select>
 </mapper>
